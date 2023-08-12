@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-    char lower_case;
+    char lc;
 
-    for (lower_case = 'a'; lower_case <= 'z' lower_case++)
+    for (lc = 'a'; lc <= 'z'; lc++)
     {
-	    if (lower_case != 'q' && lower_case != 'e')
-		    putchar(lower_case);
+	    if (lc !='q' && lc != 'e')
+		    putchar(lc);
     }
     putchar('\n');
-    return(0);
+    return (0);
 }
