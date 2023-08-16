@@ -25,7 +25,7 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar((mul / 10) +'0');
+				_putchar((mul / 10) + '0');
 				_putchar((mul % 10) + '0');
 			}
 			if (p2 < 9)
@@ -33,15 +33,13 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			else
-			{
-
-				_putchar('$');
-			}
 			p2++;
 		}
+
 		p1++;
+
 		_putchar('\n');
 		p2 = 0;
 	}
+	_putchar('$');
 }
