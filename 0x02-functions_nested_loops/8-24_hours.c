@@ -12,13 +12,15 @@ void jack_bauer(void)
 
 	while (hr < 24)
 	{
+		mt = 0;
+
 		while (mt < 60)
 		{
-			_putchar((mt / 10) + '0');
-			_putchar((mt % 10) + '0');
-			_putchar(':');
 			_putchar((hr / 10) + '0');
 			_putchar((hr % 10) + '0');
+			_putchar(':');
+			_putchar((mt / 10) + '0');
+			_putchar((mt % 10) + '0');
 			_putchar('\n');
 			mt++;
 		}
