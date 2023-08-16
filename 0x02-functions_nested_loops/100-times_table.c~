@@ -1,0 +1,11 @@
+#include "main.h"
+/**
+ * print_times_table - print the n times table, starting with 0.
+ * @n: Parameter.
+ * Return: 0.
+ */
+void print_times_table(int n)
+{
+	int p1, p2, mul;
+
+
