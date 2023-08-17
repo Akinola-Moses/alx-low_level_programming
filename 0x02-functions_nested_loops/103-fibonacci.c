@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Finds and prints the sum of the even-valued terms.
+ * main - Finds and prints the sum of the even-valued terms.e:
  * Return: 0.
  */
 int main(void)
@@ -23,7 +23,7 @@ int main(void)
 		x = pd;
 	}
 
-	printf("%lu\n", sum);
+	printf("%lu\n", add);
 
 	return (0);
 }
