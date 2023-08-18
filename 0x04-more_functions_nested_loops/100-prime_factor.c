@@ -18,7 +18,6 @@ int main(void)
 		}
 		pf++;
 	}
-	printf("%ld", pf);
-	printf("\n");
+	printf("%ld\n", pf);
 	return (0);
 }
