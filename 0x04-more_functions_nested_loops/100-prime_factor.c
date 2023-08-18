@@ -18,7 +18,7 @@ int main(void)
 		}
 		pf++;
 	}
-	printf("%ld", pn);
+	printf("%ld", pf);
 	printf("\n");
 	return (0);
 }
