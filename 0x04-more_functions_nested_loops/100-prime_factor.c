@@ -19,7 +19,7 @@ int main(void)
 		}
 		pf++;
 	}
-	printf("%ld\n", pf);
+	printf("%ld", pf);
 	printf("\n");
 	return (0);
 }
