@@ -15,9 +15,11 @@ int main(void)
 		if ((pn % pf) == 0)
 		{
 			pn = pn / pf;
+			pf--;
 		}
 		pf++;
 	}
 	printf("%ld\n", pf);
+	printf("\n");
 	return (0);
 }
