@@ -18,7 +18,7 @@ int main(void)
 
 
 	sum = 0;
-	srand((int) time(&pt));
+	srand((unsigned int) time(&pt));
 	
 	for (l = 0; sum < 2772; l++)
 	{
