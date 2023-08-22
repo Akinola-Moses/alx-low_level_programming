@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * _atoi - Convert a string to an integer.
@@ -9,44 +9,34 @@
 
 int _atoi(char *s)
 {
-	int idx, ns, a, b, c, d, nm;
-	a = 0;
-	b = 0;
-	c = 0;
-	d = 0;
+	int l = 0;
+	int idx = 0;
+	int sii = 0;/*Search for digit*/
+	int si = 0;/*check for sign*/
+	int n = 0;
+	int rs = 0;
 
-	for (idx = 0; s[idx] == ' '; idx++)
+	for (; s[l] != '\0'; l++)
 	{
 
 	}
-	if ((s[idx]) == '-')
+	for (idx = 0; idx < l && sii == 0; idx++)
 	{
-		ns = -1;
-	}
-	else if ((s[idx]) == '+')
-	{
-		ns = 1;
-	}
-	else
-	{
-		ns = 1;
-	}
-	while (s[idx] >= '0' && s[idx] <= '9')
-	{
-		nm = s[idx] - '0';
-		if (a > (b / 10) || (a == b / 10 && nm > b % 10))
+		if (s[idx] == '-')
+			++si;
+		if (s[idx] >= '0' && s[idx] <= '9')
 		{
-			if (ns == 1)
-			{
-				return (c);
-			}
-			else
-			{
-				return (d);
-			}
+			n = (s[idx] - '0');
+			if (si % 2)
+				n = -n;
+			rs = rs * 10 + n;
+			sii = 1;
+			if (s[idx + 1] < '0' || s[idx + 1] > '9')
+				break;
+			sii = 0;
 		}
-		a = a * 10 + nm;
-		idx++;
 	}
-	return (a * ns);
+	if (sii == 0)
+		return (0);
+	return (rs);
 }
