@@ -8,6 +8,7 @@
 
 char *cap_string(char *s)
 {
+	char *p = s;
 	int idx = 0;
 	int cl = 1;
 
@@ -32,5 +33,5 @@ s[idx] == '{' || s[idx] == '}')
 		}
 		idx++;
 	}
-	return (s);
+	return (p);
 }
