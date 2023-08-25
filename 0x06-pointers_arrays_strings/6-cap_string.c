@@ -16,7 +16,7 @@ char *cap_string(char *s)
 				|| s[idx] == ';' || s[idx] == '.'
 				|| s[idx] == '!' || s[idx] == '?'
 				|| s[idx] == '"' || s[idx] == '('
-				|| s[idx] == ')' || s[idx] == '{'|| s[idx] == '}')
+				|| s[idx] == ')' || s[idx] == '{' || s[idx] == '}')
 		{
 			cl = 1;
 		}
@@ -27,7 +27,7 @@ char *cap_string(char *s)
 		}
 		else if (!cl && s[idx] >= 'A' && s[idx] <= 'Z')
 		{
-				s[idx] += ('a' - 'A');
+			s[idx] += ('a' - 'A');
 		}
 		idx++;
 	}
