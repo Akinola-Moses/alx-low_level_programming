@@ -30,7 +30,7 @@ void print_buffer(char *b, int size)
 
 		while (lo < l1 + 10 && lo < size)
 		{
-			printf("%c", (*(b + lo) < 32 || *(b + lo) > 126) ? '-' : *(b + lo));
+			printf("%c", (*(b + lo) < 32 || *(b + lo) > 126) ? '.' : *(b + lo));
 			lo++;
 		}
 		printf("\n");
