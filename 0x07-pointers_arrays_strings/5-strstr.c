@@ -14,6 +14,7 @@ char *_strstr(char *haystack, char *needle)
 	for (; *haystack; haystack++)
 	{
 		char *a = haystack, *b = needle;
+
 		for (; *b && *a == *b; a++, b++)
 		{
 
