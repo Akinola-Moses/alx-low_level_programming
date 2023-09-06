@@ -32,7 +32,7 @@ int _strlen(char *s)
 char *argstostr(int ac, char **av)
 {
 	int l1 = 0, l2 = 0;
-	int y = 0;
+	int y;
 	int idx = 0, suml = 0;
 	char *res;
 
@@ -46,7 +46,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (; l1 < ac; l1++)
+	for (l1 = 0; l1 < ac; l1++)
 	{
 		suml = suml + _strlen(av[l1]) + 1;
 	}
@@ -58,11 +58,11 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (; l1 < ac; l1++)
+	for (l1 = 0; l1 < ac; l1++)
 	{
 		l2 = _strlen(av[l1]);
 
-		for (; y < l2; y++)
+		for (y = 0; y < l2; y++)
 		{
 			res[idx] = av[l1][y];
 			idx++;
