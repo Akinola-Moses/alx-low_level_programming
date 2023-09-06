@@ -20,6 +20,7 @@ int _strlen(char *s)
 	return (l);
 }
 
+
 /**
  * argstostr - Concatenates arguments.
  * @ac: count.
@@ -30,7 +31,7 @@ int _strlen(char *s)
 
 char *argstostr(int ac, char **av)
 {
-	int l1 = 0, l2 =0;
+	int l1 = 0, l2 = 0;
 	int y = 0;
 	int idx = 0, suml = 0;
 	char *res;
