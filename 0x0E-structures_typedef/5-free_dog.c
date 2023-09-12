@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free dog - Frees dog.
+ * free_dog - Frees dog.
  * @d: ptr to dog.
  *
  * Return: Nothing.
