@@ -32,17 +32,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", s);
 		}
-		idx++;
 
 
-		if (idx >= n - 1 && separator == NULL)
-		{
-			return;
-		}
-		else
+		if (idx < n - 1 && separator != NULL)
 		{
 			printf("%s", separator);
 		}
+		idx++;
 	}
 	va_end(ap);
 	printf("\n");
