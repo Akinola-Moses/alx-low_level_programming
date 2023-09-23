@@ -31,8 +31,8 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (!node_n->str)
 	{
-		return (NULL);
 		free(node_n);
+		return (NULL);
 	}
 
 	while (node_n->str[l] != '\0')
