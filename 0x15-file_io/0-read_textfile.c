@@ -13,6 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *p_f;
 	char *l_b;
 	ssize_t n_randp;
+	size_t l = 0;
 
 	n_randp = 0;
 
@@ -38,8 +39,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while (fgets(l_b, letters, p_f))
 	{
-		write(STDOUT_FILENO, l_b, strlen(l_b));
-		n_randp += strlen(l_b);
+		l = 0;
+		while (l_b[l])
+		{
+			l++;
+		}
+		write(STDOUT_FILENO, l_b, l);
+		n_randp += l;
 	}
 	fclose(p_f);
 
