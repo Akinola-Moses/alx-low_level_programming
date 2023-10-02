@@ -36,10 +36,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-
 	while (fgets(l_b, letters, p_f))
 	{
-		fputs(l_b, stdout);
+		write(STDOUT_FILENO, l_b, strlen(l_b));
 		n_randp += strlen(l_b);
 	}
 	fclose(p_f);
