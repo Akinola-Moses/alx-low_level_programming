@@ -44,10 +44,11 @@ int main(int argc, char *argv[])
 	while ((n_r = fread(buf_n, 1, BUFBYTES, p_ffrom)) > 0)
 	{
 		n_w = fwrite(buf_n, 1, n_r, p_fto);
-
+		/*
 		if (n_w != n_r)
 		{
 			fprintf(stderr, "Error: Can't write to file_to\n");
+			*/
 			fclose(p_ffrom);
 			fclose(p_fto);
 			exit(99);
