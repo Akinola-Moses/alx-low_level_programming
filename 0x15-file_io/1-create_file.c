@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int n_write = 0;
 
-	int t_file = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
+	int t_file = open(filename, O_TRUNC | O_WRONLY, 0600);
 
 	if (!t_file)
 	{
