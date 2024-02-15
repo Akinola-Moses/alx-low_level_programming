@@ -20,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 
 	t_file = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
-	if (!t_file)
+	if (t_file == -1)
 	{
 		return (-1);
 	}
@@ -29,7 +29,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		n_write = write(t_file, text_content, strlen(text_content));
 
-		if (!n_write)
+		if (n_write == -1)
 		{
 			close(t_file);
 			return (-1);
