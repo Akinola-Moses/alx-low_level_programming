@@ -13,10 +13,6 @@ int create_file(const char *filename, char *text_content)
 	int n_write = 0;
 	int t_file = 0;
 
-	if (filename == NULL)
-	{
-		return(-1);
-	}
 
 	t_file = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
