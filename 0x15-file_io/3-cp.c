@@ -56,14 +56,12 @@ int main(int argc, char *argv[])
 	while (n_read > 0)
 	{
 		n_write = write(fto, my_buf, n_read);
-		/*
 		if (n_write != n_read)
 		{
 			close(ffrom);
 			close(fto);
 			_printerr(99, "Error: Can't write to %s\n", argv[2]);
 		}
-		*/
 		n_read = read(ffrom, my_buf, MY_BUF);
 	}
 	if (n_read == -1)
