@@ -31,8 +31,8 @@ void _printerr(int e_exit, const char *format, ...)
 int main(int argc, char *argv[])
 {
 	char my_buf[MY_BUF];
-	ssize_t ffrom = 0, fto = 0;
-	int n_read, n_write;
+	int ffrom = 0, fto = 0;
+	int n_read = 0, n_write = 0;
 
 	if (argc != 3)
 	{
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 	{
 		close(ffrom);
 		close(fto);
-		_printerr(98, "Error: Can't read from file %s\n", argv[2]);
+		_printerr(98, "Error: Can't read from file %s\n", argv[1]);
 	}
 	if (close(ffrom) == -1)
 	{
