@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * _printerr - Print error message 
+ * and exit.
+ * @e_exit: For the exit.
+ * @format: Format parameter.
+ * Return - Nothing.
+ */
+
 void _printerr(int e_exit, const char *format, ...)
 {
 	va_list args;
@@ -11,16 +19,26 @@ void _printerr(int e_exit, const char *format, ...)
 	exit(e_exit);
 }
 
+
+/**
+ * main - Copy the content of a file
+ * to another.
+ * @argc: argument count.
+ * @argv: argument vector.
+ * Return: 0 on success or -1 otherwise.
+ */
+
 int main(int argc, char *argv[])
 {
 	char my_buf[MY_BUF];
-	int ffrom = 0, fto = 0;
+	ssize_t ffrom = 0, fto = 0;
 	int n_read, n_write;
 
 	if (argc != 3)
 	{
 		_printerr(97, "Usage: cp file_from file_to\n");
 	}
+
 	ffrom = open(argv[1], O_RDONLY);
 	if (ffrom == -1)
 	{
